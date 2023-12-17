@@ -3,6 +3,18 @@
   background-color: red;
   height: 10vh;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo-container {
+  margin: 12px;
+}
+
+a {
+  color: #FDF8F8;
+  text-decoration: none;
 }
 
 .title-page {
@@ -42,7 +54,7 @@ html{
 body{
     background-color: #FDF8F8;
     font-family: Roboto;
-    gap: 10px;
+    /* gap: 10px;
     height: 100%;
     margin: 0;
     display: grid;
@@ -50,9 +62,9 @@ body{
     grid-template-rows: 15% 84%;
     grid-template-areas:
       "hd    hd   nav    nav   nav"
-      "main   main main main main "
+      "main   main main main main " */
   }
-
+/*
   header{
     grid-area: hd;
       background-color: #002394;
@@ -67,4 +79,4 @@ body{
   main{
     grid-area: main;
       background-color: #002394;
-  }
+  } */
