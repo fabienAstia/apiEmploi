@@ -1,0 +1,32 @@
+html{
+    height: 100%;
+}
+
+body{
+    gap: 10px;
+    height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 33% 33% 11% 11% 11%;
+    grid-template-rows: 15% 84%;
+    grid-template-areas: 
+      "hd    hd   nav    nav   nav"
+      "main   main main main main "
+  }
+  
+  header{
+    grid-area: hd;
+      background-color: #002394;
+  }
+
+  nav{
+    grid-area: nav;
+    background-color: #002394;
+  }
+  
+  
+  main{
+    grid-area: main;
+      background-color: #002394;
+  }
+  
