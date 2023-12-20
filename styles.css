@@ -1,13 +1,49 @@
+/* max pc 1200 */
+/* 992 */
 
 
 
 
+
+
+
+body {
+  background-color: #FDF8F8;
+  font-family: Roboto;
+}
 
 header{
   align-items: center;
   height: 17vh;
   width: 100%;
   background-color: #002394;
+}
+  
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  color: #FDF8F8;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  width: 80%;
+  height: fit-content;
+  background-color: #002394;
+  padding: 20px;
+  border-radius: 12px;
   display: flex;
   justify-content: space-between;
   /* background-color: #fdf8f8; */
@@ -43,3 +79,35 @@ nav{
 height: 40%;
 }
 
+section{
+width: 80%;
+height: fit-content;
+background-color: #002394;
+padding: 20px;
+border-radius: 12px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+  box-shadow: 0px 4px 17px 4px rgba(0,0,0,0.2);
+  margin: 6vh auto;
+}
+
+.info {
+  color: #FDF8F8;
+}
+
+.info .jobInfo a h3 {
+  color: #FDF8F8;
+}
+
+i {
+  font-size: xx-large;
+  color: #FDF8F8;
+}
+ p {
+  color:#FDF8F8
+ }
+
+ p:active {
+  color: #FDF8F8;
+}
