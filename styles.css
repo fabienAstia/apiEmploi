@@ -14,6 +14,8 @@ body{
       "main   main main main main "
   }
   
+
+
   header{
     grid-area: hd;
       background-color: #002394;
@@ -30,3 +32,19 @@ body{
       background-color: #002394;
   }
   
+#logo{
+    display: inline-block;
+    height: 90%;
+    width: 40%;
+    padding: 5px;
+    background-color: antiquewhite;
+}
+
+#titre{
+    display: inline-block;
+    height: 100%;
+    width: 55%;
+    padding: 5px;
+    margin: auto;
+    background-color: aqua;
+}
