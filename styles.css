@@ -98,7 +98,8 @@ align-items: center;
 
 i {
   font-size: xx-large;
-  color: #FDF8F8; 
+  color: #FDF8F8;
+  cursor: pointer;
 }
  p {
   color:#FDF8F8
