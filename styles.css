@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.logo-container {
+.logo {
   margin: 12px;
 }
 
@@ -38,13 +38,27 @@ a {
   color: #FDF8F8;
 }
 
-.fav-icon {
+.logo-fav {
   margin-right: 24px;
 }
 
 .fa-heart {
   font-size: 36px;
   color: red  ;
+}
+
+.nav {
+  display: flex;
+  padding: 6px;
+}
+
+.btn {
+  height: 40px;
+  width: fit-content;
+  background-color: #002394;
+  margin: 8px;
+  align-items: center;
+  justify-content: center;
 }
 
 html{
@@ -80,5 +94,3 @@ body{
     grid-area: main;
       background-color: #002394;
   } */
-
-  
