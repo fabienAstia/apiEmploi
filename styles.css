@@ -78,7 +78,7 @@ body{
       "hd    hd   nav    nav   nav"
       "main   main main main main " */
   }
-/*
+
   header{
     grid-area: hd;
       background-color: #002394;
@@ -93,4 +93,6 @@ body{
   main{
     grid-area: main;
       background-color: #002394;
-  } */
+
+  }
+
