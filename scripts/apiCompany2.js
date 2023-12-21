@@ -6,7 +6,7 @@
 
 async function fetchComp(){
     //console.log("bravo tu sais capturer un event click");
-    const response = await fetch("https://recherche-entreprises.api.gouv.fr/search?categorie_entreprise=GE&code_postal=75020&section_activite_principale=A%2C%20B%2C%20C%2C%20D%2C%20E%2C%20F%2C%20G&page=1&per_page=25");
+    const response = await fetch("https://recherche-entreprises.api.gouv.fr/search?categorie_entreprise=GE&code_postal=75020&section_activite_principale=A%2C%20B%2C%20C%2C%20D%2C%20E%2C%20F%2C%20G&page=2&per_page=25");
     const json = await response.json(); //fonction pour retourner le body au format json
     //json[0] == {"name":{"common": "Christmas Island"}} , soit un objet
     // const firstComp = json.results[0].nom_complet;
@@ -33,7 +33,8 @@ window.addEventListener("load", (event) => {
 });   //écouter event
 
 
-const target = document.getElementById("target");
+const target = document.getElementById("target2");
 //parcours le tableau
 
 
+// https://recherche-entreprises.api.gouv.fr/search?categorie_entreprise=GE&code_postal=75020&section_activite_principale=A%2C%20B%2C%20C%2C%20D%2C%20E%2C%20F%2C%20G&page=2&per_page=25
