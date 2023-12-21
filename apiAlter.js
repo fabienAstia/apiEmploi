@@ -4,7 +4,7 @@
 //     console.log(alter);
 //   }
 
-  async function fetchAlter(){
+  async function fetchComp(){
     //console.log("bravo tu sais capturer un event click");
     const response = await fetch("https://recherche-entreprises.api.gouv.fr/search?q=la%20poste&page=1&per_page=1");
     const json = await response.json(); //fonction pour retourner le body au format json
@@ -20,7 +20,7 @@
 
 
 window.addEventListener("load", (event) => {
-    fetchAlter();
+    fetchComp();
 });   //écouter event
 
 
