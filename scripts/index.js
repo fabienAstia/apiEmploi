@@ -1,19 +1,32 @@
-const url = "https://labonnealternance.apprentissage.beta.gouv.fr/api/v1/jobs?romes=F1603%2CI1308&caller=contact%40domaine%20nom_de_societe&latitude=48.845&longitude=2.3752&radius=30&insee=75056"
+const target = document.querySelector(".container")
 
-// const url = "https://data.ademe.fr/data-fair/api/v1/datasets/base-carboner/"
-
+const url = "./data/data.json"
 
 async function fetchApiData() {
   const response = await fetch(url, {
     method: 'GET',
     headers: {
       'Accept':'application/json',
-      // 'mode':'no-cors',
-      // 'Origin':'*'
     }
   });
   const data = await response.json();
-  console.log(data);
+  const results = data.peJobs.results;
+  console.log(results)
+
+  results.forEach(result => {
+      target.insertAdjacentHTML("beforeend", ` <section>
+      <div class="info">
+        <div class="jobInfo">${result.title}</div>
+        <div class="companyInfo">${result.job.description.slice(0,200)}...</div>
+        <div class="companyInfo">${result.place.fullAddress}</div>
+      </div>
+      <div class="logo-fav">
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-regular fa-heart"></i>
+      </div>
+    </section>`)
+  });
+
 }
 
 window.addEventListener("load", (event) => {
