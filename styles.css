@@ -111,3 +111,10 @@ i {
  p:active {
   color: #FDF8F8;
 }
+
+.jobInfo {
+  margin-bottom: 12px;
+}
+.companyInfo {
+  margin-bottom: 12px;
+}
