@@ -1,4 +1,5 @@
 const target = document.querySelector(".container")
+console.log(target)
 
 const url = "./data/dataJob.json"
 
@@ -14,7 +15,7 @@ async function fetchApiData() {
   console.log(results)
 
   for (let index = 0; index < results.length; index++) {
-    target.insertAdjacentHTML("aftereend",
+    target.insertAdjacentHTML("afterend",
     ` <section id="${index}">
     <div class="info">
       <div class="jobInfo">
