@@ -16,10 +16,16 @@ async function fetchComp(){
     //
     for (let i=0; i<json.results.length; i++){
       const company = json.results[i].nom_complet;
-      const adresse = json.results[i].siege.adresse;
+      let adresse = json.results[i].siege.geo_adresse;
+      //const codePostal = json.results[i].siege.code_postal;
       const li = `<li>${company}</li>`;
       target.innerHTML += li;
+      if (adresse === null){
+        adresse = json.results[i].siege.adresse
+      }
       target.innerHTML += adresse;
+      
+      //target.innerHTML += codePostal;
       console.log(li);
     }
     
