@@ -13,6 +13,8 @@ header{
   height: 17vh;
   width: 100%;
   background-color: #002394;
+  position: sticky;
+  top: 0;
 }
 
 a {
@@ -69,7 +71,8 @@ section {
 }
 
 nav{
-  padding: 10px;
+  padding: 6px;
+  margin: 0 8px;
 }
 .btn{
   padding: 5px;
@@ -77,15 +80,15 @@ nav{
 }
 
 section{
-width: 80%;
-height: fit-content;
-background-color: #002394;
-padding: 20px;
-border-radius: 12px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-  box-shadow: 0px 4px 17px 4px rgba(0,0,0,0.2);
+  width: 80%;
+  height: fit-content;
+  background-color: #002394;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
   margin: 6vh auto;
 }
 
@@ -99,7 +102,8 @@ align-items: center;
 
 i {
   font-size: xx-large;
-  color: #FDF8F8; 
+  color: #FDF8F8;
+  cursor: pointer;
 }
  p {
   color:#FDF8F8
@@ -107,4 +111,11 @@ i {
 
  p:active {
   color: #FDF8F8;
+}
+
+.jobInfo {
+  margin-bottom: 12px;
+}
+.companyInfo {
+  margin-bottom: 12px;
 }
