@@ -11,13 +11,15 @@ async function fetchComp(){
     //json[0] == {"name":{"common": "Christmas Island"}} , soit un objet
     
 
-    const firstComp = json.results[0].nom_complet;
-    console.log(firstComp);
+    // const firstComp = json.results[0].nom_complet;
+    // console.log(firstComp);
     //
     for (let i=0; i<json.results.length; i++){
       const company = json.results[i].nom_complet;
+      const adresse = json.results[i].siege.adresse;
       const li = `<li>${company}</li>`;
       target.innerHTML += li;
+      target.innerHTML += adresse;
       console.log(li);
     }
     
