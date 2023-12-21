@@ -51,9 +51,10 @@ section {
   align-items: center;
 	display: flex;
   height: auto;
+  width: 15%;
   background-color: #002394;
   padding: 5px;
-  width: 15%;
+  
 }
 
 #logo{
