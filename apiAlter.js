@@ -3,3 +3,4 @@ async function afficherAlter() {
     const alter = await reponse.json();
     console.log(alter);
   }
+
