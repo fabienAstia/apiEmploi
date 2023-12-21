@@ -1,6 +1,6 @@
 const target = document.querySelector(".container")
 
-const url = "./data/data.json"
+const url = "./data/dataJob.json"
 
 async function fetchApiData() {
   const response = await fetch(url, {
@@ -13,20 +13,22 @@ async function fetchApiData() {
   const results = data.peJobs.results;
   console.log(results)
 
-  results.forEach(result => {
-      target.insertAdjacentHTML("beforeend", ` <section>
-      <div class="info">
-        <div class="jobInfo">${result.title}</div>
-        <div class="companyInfo">${result.job.description.slice(0,200)}...</div>
-        <div class="companyInfo">${result.place.fullAddress}</div>
+  for (let index = 0; index < results.length; index++) {
+    target.insertAdjacentHTML("beforeend",
+    ` <section id="${index}">
+    <div class="info">
+      <div class="jobInfo">
+      <a href="infos-map.html?id=${index}">${results[index].title}</a>
       </div>
-      <div class="logo-fav">
-        <i class="fa-solid fa-heart"></i>
-        <i class="fa-regular fa-heart"></i>
-      </div>
-    </section>`)
-  });
-
+      <div class="companyInfo">${results[index].job.description.slice(0,200)}...</div>
+      <div class="companyInfo">${results[index].place.fullAddress}</div>
+    </div>
+    <div class="logo-fav">
+      <i class="fa-solid fa-heart"></i>
+      <i class="fa-regular fa-heart"></i>
+    </div>
+  </section>`)
+  }
 }
 
 window.addEventListener("load", (event) => {
