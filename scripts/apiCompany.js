@@ -9,28 +9,23 @@ async function fetchComp(){
     const response = await fetch("https://recherche-entreprises.api.gouv.fr/search?categorie_entreprise=GE&code_postal=75020&section_activite_principale=A%2C%20B%2C%20C%2C%20D%2C%20E%2C%20F%2C%20G&page=1&per_page=10");
     const json = await response.json(); //fonction pour retourner le body au format json
     //json[0] == {"name":{"common": "Christmas Island"}} , soit un objet
-    
-
     // const firstComp = json.results[0].nom_complet;
     // console.log(firstComp);
-    //
+    
     for (let i=0; i<json.results.length; i++){
       const company = json.results[i].nom_complet;
       let adresse = json.results[i].siege.geo_adresse;
-      //const codePostal = json.results[i].siege.code_postal;
+      const newLine = `</br></br>`;   
       const li = `<li>${company}</li>`;
+
       target.innerHTML += li;
       if (adresse === null){
         adresse = json.results[i].siege.adresse
-      }
+        }
       target.innerHTML += adresse;
-      
-      //target.innerHTML += codePostal;
-      console.log(li);
+      target.innerHTML += newLine;
     }
-    
-  }
-
+}
 
 
 window.addEventListener("load", (event) => {
