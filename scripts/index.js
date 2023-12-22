@@ -31,7 +31,7 @@ async function fetchApiData() {
   const allHearts = document.querySelectorAll(".fa-heart")
   allHearts.forEach(heart => {
     heart.addEventListener("click", (event) => {
-      favories.localStorage.getItem('fav')
+      favories = JSON.parse(localStorage.getItem('fav'))
       favories.push(event.target.id)
       console.log(typeof(favories))
       localStorage.setItem("fav", JSON.stringify(favories));
