@@ -22,7 +22,7 @@ async function fetchApiData(favories) {
     ` <section>
     <div class="info">
       <div class="jobInfo">
-      <a href="infos-map.html?id=${index}">${results[favories[index]].title}</a>
+      <a href="infos-map.html?id=${favories[index]}">${results[favories[index]].title}</a>
       </div>
       <div class="companyInfo">${results[favories[index]].job.description.slice(0,200)}...</div>
       <div class="companyInfo">${results[favories[index]].place.fullAddress}</div>

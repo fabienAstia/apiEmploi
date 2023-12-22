@@ -23,8 +23,6 @@ async function fetchApiData() {
   <div class="companyInfo">${results[id].place.fullAddress}</div>
   </div>
   <div class="logo-fav">
-  <i class="fa-solid fa-heart"></i>
-  <i class="fa-regular fa-heart"></i>
   </div>
   </section>`
   )
