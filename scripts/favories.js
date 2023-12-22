@@ -1,14 +1,9 @@
-const url = "./data/dataJob.json"
+const url = "./data/dataJob.json";
 
-const target = document.querySelector(".container")
+const target = document.querySelector(".container");
 
 async function fetchApiData(favories) {
-  const response = await fetch(url, {
-    method: 'GET',
-    headers: {
-      'Accept':'application/json',
-    }
-  });
+  const response = await fetch(url);
   const data = await response.json();
   const results = data.peJobs.results;
 
@@ -25,29 +20,30 @@ async function fetchApiData(favories) {
     <div class="logo-fav">
       <i class="fa-solid fa-heart" id="${favories[index]}"></i>
     </div>
-  </section>`)
+  </section>`);
 
-}
-  // const favIcons = document.querySelectorAll('.fa-heart')
-  // favIcons.forEach(icon => {
-  //   icon.addEventListener('click', (event)=> {
-  //     const valueToDelete = event.target.id
-  //     const keys = Object.keys(favories)
-  //     keys.forEach(key => {
-  //       if (favories[key] === valueToDelete) {
-  //         delete favories[key]
-  //         console.log(favories)
-  //         localStorage.setItem('fav', JSON.stringify(favories))
-  //         // let favories = JSON.parse(localStorage.getItem('fav')) || [];
-  //       }
-  //     })
-  //   })
-  // })
-}
+};
+  const favIcons = document.querySelectorAll('.fa-heart')
+  favIcons.forEach(icon => {
+    icon.addEventListener('click', (event)=> {
+      const valueToDelete = event.target.id;
+      favories = favories.filter(element => element !== `${valueToDelete}`);
+      localStorage.setItem('fav', favories.join(','));
+      location.reload(true);
+    });
+  });
+};
 
 
 window.addEventListener("load", (even) => {
-  let favories = JSON.parse(localStorage.getItem('fav')) || [];
-  fetchApiData(favories)
+  let favories = [];
+  if (localStorage.getItem('fav').split(',')[0] === '' ) {
+     favories = [];
+  }
+  else {
+     favories = localStorage.getItem('fav').split(',');
+  };
+  console.log(favories);
+  fetchApiData(favories);
   // localStorage.removeItem("fav");
   });
