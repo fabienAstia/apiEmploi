@@ -1,5 +1,5 @@
 const target = document.querySelector(".container")
-console.log(target)
+let favories = []
 
 const url = "./data/dataJob.json"
 
@@ -12,11 +12,10 @@ async function fetchApiData() {
   });
   const data = await response.json();
   const results = data.peJobs.results;
-  console.log(results)
 
   for (let index = 0; index < results.length; index++) {
     target.insertAdjacentHTML("afterend",
-    ` <section id="${index}">
+    ` <section>
     <div class="info">
       <div class="jobInfo">
       <a href="infos-map.html?id=${index}">${results[index].title}</a>
@@ -25,12 +24,24 @@ async function fetchApiData() {
       <div class="companyInfo">${results[index].place.fullAddress}</div>
     </div>
     <div class="logo-fav">
-      <i class="fa-solid fa-heart"></i>
-      <i class="fa-regular fa-heart"></i>
+      <i class="fa-regular fa-heart" id="${index}"></i>
     </div>
   </section>`)
   }
+  const allHearts = document.querySelectorAll(".fa-heart")
+  allHearts.forEach(heart => {
+    heart.addEventListener("click", (event) => {
+      favories = JSON.parse(localStorage.getItem('fav'))
+      favories.push(event.target.id)
+      console.log(typeof(favories))
+      localStorage.setItem("fav", JSON.stringify(favories));
+      console.log(localStorage.getItem('fav'))
+    })
+  })
 }
+
+{/* <i class="fa-solid fa-heart"></i> */}
+
 
 window.addEventListener("load", (event) => {
   fetchApiData();
