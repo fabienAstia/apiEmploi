@@ -2,7 +2,6 @@ const url = "./data/dataJob.json"
 
 const target = document.querySelector(".container")
 
-
 async function fetchApiData(favories) {
   const response = await fetch(url, {
     method: 'GET',
@@ -13,11 +12,7 @@ async function fetchApiData(favories) {
   const data = await response.json();
   const results = data.peJobs.results;
 
-  console.log(typeof(favories))
-
   for (let index = 0; index < favories.length; index++) {
-
-    console.log(results[favories[index]])
     target.insertAdjacentHTML("afterend",
     ` <section>
     <div class="info">
@@ -28,17 +23,31 @@ async function fetchApiData(favories) {
       <div class="companyInfo">${results[favories[index]].place.fullAddress}</div>
     </div>
     <div class="logo-fav">
-      <i class="fa-regular fa-heart" id="${index}"></i>
+      <i class="fa-solid fa-heart" id="${favories[index]}"></i>
     </div>
   </section>`)
-  }
+
+}
+  // const favIcons = document.querySelectorAll('.fa-heart')
+  // favIcons.forEach(icon => {
+  //   icon.addEventListener('click', (event)=> {
+  //     const valueToDelete = event.target.id
+  //     const keys = Object.keys(favories)
+  //     keys.forEach(key => {
+  //       if (favories[key] === valueToDelete) {
+  //         delete favories[key]
+  //         console.log(favories)
+  //         localStorage.setItem('fav', JSON.stringify(favories))
+  //         // let favories = JSON.parse(localStorage.getItem('fav')) || [];
+  //       }
+  //     })
+  //   })
+  // })
 }
 
 
 window.addEventListener("load", (even) => {
-  let favories = JSON.parse(localStorage.getItem('fav'));
-  console.log(favories)
+  let favories = JSON.parse(localStorage.getItem('fav')) || [];
   fetchApiData(favories)
   // localStorage.removeItem("fav");
-
   });
