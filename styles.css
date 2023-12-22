@@ -59,7 +59,9 @@ section {
 
 #logo{
   max-width: 45%;
+  min-width: 40%;
   max-height: 45%;
+  min-height: 40%;
   margin: auto;
 }
 
