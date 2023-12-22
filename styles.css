@@ -119,3 +119,13 @@ i {
 .companyInfo {
   margin-bottom: 12px;
 }
+.selectPage{
+  display: flex;
+  justify-content: center;}
+
+.page{
+  background-color: #FDF8F8;;
+  margin: 5px;
+  font-weight: 600;
+  padding: 5px;
+}
