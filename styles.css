@@ -15,11 +15,12 @@ header{
   background-color: #002394;
   position: sticky;
   top: 0;
+  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 a:active {
@@ -54,7 +55,7 @@ section {
   width: 15%;
   background-color: #002394;
   padding: 5px;
-  
+
 }
 
 #logo{
