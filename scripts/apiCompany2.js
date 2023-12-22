@@ -15,15 +15,17 @@ async function fetchComp(){
     for (let i=0; i<json.results.length; i++){
       const company = json.results[i].nom_complet;
       let adresse = json.results[i].siege.geo_adresse;
-      const newLine = `</br></br>`;   
-      const li = `<li>${company}</li>`;
-
-      target.innerHTML += li;
+      //const newLine = `</br></br>`;   
       if (adresse === null){
         adresse = json.results[i].siege.adresse
         }
-      target.innerHTML += adresse;
-      target.innerHTML += newLine;
+      const section = `<section><div class="info"><div class= "jobInfo">${company}</br>${adresse}</div></div></section>`;
+      //const li = `<li>${company}</li>`;
+
+      target.innerHTML += section;
+
+     // target.innerHTML += adresse;
+      //target.innerHTML += newLine;
     }
 }
 
