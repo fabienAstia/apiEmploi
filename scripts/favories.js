@@ -1,9 +1,9 @@
-const target = document.querySelector(".container")
-let favories = []
-
 const url = "./data/dataJob.json"
 
-async function fetchApiData() {
+const target = document.querySelector(".container")
+
+
+async function fetchApiData(favories) {
   const response = await fetch(url, {
     method: 'GET',
     headers: {
@@ -13,7 +13,7 @@ async function fetchApiData() {
   const data = await response.json();
   const results = data.peJobs.results;
 
-  for (let index = 0; index < results.length; index++) {
+  for (let index = 0; index < favories.length; index++) {
     target.insertAdjacentHTML("afterend",
     ` <section>
     <div class="info">
@@ -28,20 +28,11 @@ async function fetchApiData() {
     </div>
   </section>`)
   }
-  const allHearts = document.querySelectorAll(".fa-heart")
-  allHearts.forEach(heart => {
-    heart.addEventListener("click", (event) => {
-      // favories.localStorage.getItem('fav')
-      favories.push(event.target.id)
-      localStorage.setItem("fav", favories);
-      console.log(localStorage.getItem('fav'))
-    })
-  })
 }
 
-{/* <i class="fa-solid fa-heart"></i> */}
 
-
-window.addEventListener("load", (event) => {
-  fetchApiData();
-})
+window.addEventListener("load", (even) => {
+  let favories = localStorage.getItem('fav');
+  console.log(favories)
+  fetchApiData(favories)
+  });
