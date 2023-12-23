@@ -67,7 +67,7 @@ window.addEventListener("load", (event) => {
   // localStorage.removeItem("fav");
 
   let favories = [];
-  if (localStorage.getItem('fav') === null) {
+  if (localStorage.getItem('fav') === null || localStorage.getItem('fav').split(',')[0] === '') {
     favories = [];
   }
   else {
