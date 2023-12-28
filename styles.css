@@ -54,6 +54,7 @@ a:active {
 }
 
 /*MAIN*/
+/*MAIN*/
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -63,7 +64,7 @@ main h1{
   text-align: center;
 }
 
-section {
+/* section {
   width: 80%;
   height: fit-content;
   background-color: #002394;
@@ -71,8 +72,8 @@ section {
   border-radius: 12px;
   display: flex;
   justify-content: space-between;
-  /* background-color: #fdf8f8; */
-}
+  background-color: #fdf8f8; 
+} */
 
 
 section{
