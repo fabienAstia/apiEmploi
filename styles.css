@@ -42,6 +42,7 @@ header nav{
   
 nav a{ /*mise en forme boutons de nav*/
   background-color: #FDF8F8;
+  color: #002394;
   padding: 5px;
   margin: 3px;
   height: 1.2rem;
@@ -87,15 +88,15 @@ section{
   box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
   margin: 6vh auto;
 }
-main a{
+
+.info {
+  color: #FDF8F8;
+}
+.jobInfo a{
   color: #FDF8F8;
   text-decoration: none;
   font-weight: 600;
 }
-.info {
-  color: #FDF8F8;
-}
-
 .info .jobInfo a h3 {
   color: #FDF8F8;
 }
