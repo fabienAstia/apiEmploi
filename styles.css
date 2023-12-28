@@ -53,48 +53,7 @@ a:active {
   color: #FDF8F8;
 }
 
-
-
-
-/* .logo{
-  align-items: center;
-	display: flex;
-  height: auto;
-  width: 15%;
-  background-color: #002394;
-  padding: 5px;
-
-}
-
-#logo{
-  max-width: 45%;
-  min-width: 40%;
-  max-height: 45%;
-  min-height: 40%;
-  margin: auto;
-}
-
-.title-header {
-  background-color: #002394;
-  font-size: 1.5em;
-  padding: 10px;
-  color: #fdf8f8;
-}
-h1 {
-  text-align: center;
-  margin: 30px; 
-}
-
-nav{
-  padding: 6px;
-  margin: 0 8px;
-}
-.btn{
-  padding: 5px;
-  height: 40%;
-} */
-
-
+/*MAIN*/
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -128,7 +87,9 @@ section{
   box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
   margin: 6vh auto;
 }
-
+main a{
+  color: black;
+}
 .info {
   color: #FDF8F8;
 }
