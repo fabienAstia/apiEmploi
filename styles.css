@@ -4,55 +4,59 @@
 body {
   background-color: #FDF8F8;
   font-family: Roboto;
+  margin: 0;
 }
 
+  /* HEADER  */
 header{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; fais sortir logo du containerParent */
   height: 17vh;
-  width: 100%;
+  width: 100vw;
   background-color: #002394;
   position: sticky;
   top: 0;
   box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
 }
 
-header a {
-  color: black;
+header a img{
+  height: 100%; /*logo dépasse pas conteneur*/
 }
-
-a {
+header a, nav { /*dimensions des principaux zoning du header*/
+  width: 25%;
+}
+header h1{
+  width: 50%;
+  color: #FDF8F8;
+  font-size: 1.5em;
+  text-align: center;
+  margin: auto;
+}
+header nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+  
+nav a{ /*mise en forme boutons de nav*/
+  background-color: #FDF8F8;
+  padding: 5px;
+  margin: 3px;
+  height: 1.2rem;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  text-align: center;
+  align-items: center;
 }
-
 a:active {
   color: #FDF8F8;
 }
 
-h1 {
-  text-align: center;
-  margin: 30px;
-}
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
-section {
-  width: 80%;
-  height: fit-content;
-  background-color: #002394;
-  padding: 20px;
-  border-radius: 12px;
-  display: flex;
-  justify-content: space-between;
-  /* background-color: #fdf8f8; */
-}
 
-.logo{
+/* .logo{
   align-items: center;
 	display: flex;
   height: auto;
@@ -76,6 +80,10 @@ section {
   padding: 10px;
   color: #fdf8f8;
 }
+h1 {
+  text-align: center;
+  margin: 30px; 
+}
 
 nav{
   padding: 6px;
@@ -84,7 +92,29 @@ nav{
 .btn{
   padding: 5px;
   height: 40%;
+} */
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+main h1{
+  text-align: center;
+}
+
+section {
+  width: 80%;
+  height: fit-content;
+  background-color: #002394;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #fdf8f8; */
+}
+
 
 section{
   width: 80%;
