@@ -54,7 +54,6 @@ a:active {
 }
 
 /*MAIN*/
-/*MAIN*/
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -89,7 +88,9 @@ section{
   margin: 6vh auto;
 }
 main a{
-  color: black;
+  color: #FDF8F8;
+  text-decoration: none;
+  font-weight: 600;
 }
 .info {
   color: #FDF8F8;
